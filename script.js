@@ -1,4 +1,4 @@
-// Function to randomly  console.log( 'Rock', 'Paper' or 'Scissors'.
+// Function to randomly  generate 'Rock', 'Paper' or 'Scissors'.
 function computerPlay(){
     let randomNumber = Math.floor((Math.random() * 100) + 1);
 if(randomNumber <= 33){
@@ -69,7 +69,7 @@ function game(){
        alert(play(playerSelection,computerSelection));
     
     }
-    
+    // The following block of code will display the final scores.
     if(playerscore === computerscore){
         alert(`Your score = ${playerscore}  Computer Score = ${computerscore}\nIt's a draw!`);
     }
