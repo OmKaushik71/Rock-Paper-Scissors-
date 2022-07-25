@@ -14,9 +14,6 @@ let computerDisplay = document.querySelector(".computer .image");
 
 let text = document.querySelector(".text");
 
-let playerBorder = document.querySelector(".player .image");
-let computerBorder = document.querySelector(".computer .image");
-
 rockButton.addEventListener("click", (e) => {
   playerSelection = "rock";
   playerDisplay.innerHTML = ' <img src="./images/rock.png" alt="rock" />';
@@ -46,7 +43,15 @@ function game() {
     text.innerText = "You won the series!🎉";
     playerScore.innerText = 0;
     computerScore.innerText = 0;
+    computerDisplay.innerHTML = " ";
+    playerDisplay.innerHTML = " ";
+    playerDisplay.style.boxShadow = "0 5px 10px rgba(0, 0, 0, 0.5)";
   } else if (computerScore.innerText == "5") {
+    playerDisplay.innerHTML = " ";
+    playerDisplay.style.boxShadow = "0 5px 10px rgba(0, 0, 0, 0.5)";
+    computerDisplay.innerHTML = " ";
+    computerDisplay.style.boxShadow = "0 5px 10px rgba(0, 0, 0, 0.5)";
+
     text.innerText = "You lost the series.😔";
     playerScore.innerText = 0;
     computerScore.innerText = 0;
@@ -57,38 +62,38 @@ function game() {
 
 function play(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
-    playerBorder.style.boxShadow = "0 5px 10px rgba(0, 0, 0, 0.5)";
-    computerBorder.style.boxShadow = "0 5px 10px rgba(0, 0, 0, 0.5)";
+    playerDisplay.style.boxShadow = "0 5px 10px rgba(0, 0, 0, 0.5)";
+    computerDisplay.style.boxShadow = "0 5px 10px rgba(0, 0, 0, 0.5)";
     return `It's a draw`;
   } else if (playerSelection === "rock" && computerSelection === "paper") {
     computerScore.innerText++;
-    playerBorder.style.boxShadow = "0 5px 10px rgba(250, 0, 0, 0.7)";
-    computerBorder.style.boxShadow = "0 5px 10px rgba(0, 128, 255, 0.7)";
+    playerDisplay.style.boxShadow = "0 5px 10px rgba(250, 0, 0, 0.7)";
+    computerDisplay.style.boxShadow = "0 5px 10px rgba(0, 128, 255, 0.7)";
     return `You lost! Paper beats Rock.`;
   } else if (playerSelection === "rock" && computerSelection === "scissors") {
     playerScore.innerText++;
-    computerBorder.style.boxShadow = "0 5px 10px rgba(250, 0, 0, 0.7)";
-    playerBorder.style.boxShadow = "0 5px 10px rgba(0, 128, 255, 0.7)";
+    computerDisplay.style.boxShadow = "0 5px 10px rgba(250, 0, 0, 0.7)";
+    playerDisplay.style.boxShadow = "0 5px 10px rgba(0, 128, 255, 0.7)";
     return `You won! Rock beats Scissors.`;
   } else if (playerSelection === "paper" && computerSelection === "rock") {
     playerScore.innerText++;
-    computerBorder.style.boxShadow = "0 5px 10px rgba(250, 0, 0, 0.7)";
-    playerBorder.style.boxShadow = "0 5px 10px rgba(0, 128, 255, 0.7)";
+    computerDisplay.style.boxShadow = "0 5px 10px rgba(250, 0, 0, 0.7)";
+    playerDisplay.style.boxShadow = "0 5px 10px rgba(0, 128, 255, 0.7)";
     return `You won! Paper beats Rock.`;
   } else if (playerSelection === "paper" && computerSelection === "scissors") {
     computerScore.innerText++;
-    playerBorder.style.boxShadow = "0 5px 10px rgba(250, 0, 0, 0.7)";
-    computerBorder.style.boxShadow = "0 5px 10px rgba(0, 128, 255, 0.7)";
+    playerDisplay.style.boxShadow = "0 5px 10px rgba(250, 0, 0, 0.7)";
+    computerDisplay.style.boxShadow = "0 5px 10px rgba(0, 128, 255, 0.7)";
     return `You lost! Scissors beats Paper`;
   } else if (playerSelection === "scissors" && computerSelection === "rock") {
     computerScore.innerText++;
-    playerBorder.style.boxShadow = "0 5px 10px rgba(250, 0, 0, 0.7)";
-    computerBorder.style.boxShadow = "0 5px 10px rgba(0, 128, 255, 0.7)";
+    playerDisplay.style.boxShadow = "0 5px 10px rgba(250, 0, 0, 0.7)";
+    computerDisplay.style.boxShadow = "0 5px 10px rgba(0, 128, 255, 0.7)";
     return `You lost! Rock beats Scissors`;
   } else if (playerSelection === "scissors" && computerSelection === "paper") {
     playerScore.innerText++;
-    computerBorder.style.boxShadow = "0 5px 10px rgba(250, 0, 0, 0.7)";
-    playerBorder.style.boxShadow = "0 5px 10px rgba(0, 128, 255, 0.7)";
+    computerDisplay.style.boxShadow = "0 5px 10px rgba(250, 0, 0, 0.7)";
+    playerDisplay.style.boxShadow = "0 5px 10px rgba(0, 128, 255, 0.7)";
     return `You won! Scissors beats Paper`;
   } else {
     console.log("Error");
