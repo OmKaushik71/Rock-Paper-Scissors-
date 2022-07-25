@@ -46,6 +46,7 @@ function game() {
     computerDisplay.innerHTML = " ";
     playerDisplay.innerHTML = " ";
     playerDisplay.style.boxShadow = "0 5px 10px rgba(0, 0, 0, 0.5)";
+    computerDisplay.style.boxShadow = "0 5px 10px rgba(0, 0, 0, 0.5)";
   } else if (computerScore.innerText == "5") {
     playerDisplay.innerHTML = " ";
     playerDisplay.style.boxShadow = "0 5px 10px rgba(0, 0, 0, 0.5)";
