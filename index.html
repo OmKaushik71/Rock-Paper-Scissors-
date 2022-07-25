@@ -1,13 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="script.js"></script>
-</head>
-<body>
-    
-</body>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Lobster&family=Teko:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>ROCK PAPER AND SCISSORS</h1>
+      <h3 id="text">First To 5 Points Wins</h3>
+      <div class="display">
+        <div class="player">
+          <h3>Player</h3>
+          <div class="image"></div>
+        </div>
+        <div class="computer">
+          <h3>Computer</h3>
+          <div class="image"></div>
+        </div>
+      </div>
+      <div class="score">
+        <p id="playerScore"></p>
+        <p>-</p>
+        <p id="computerScore"></p>
+      </div>
+      <div class="text score"></div>
+      <div class="selection">
+        <h2>Select Your Weapon!</h2>
+        <div class="buttons">
+          <div class="images" id="rock">
+            <img src="./images/rock.png" alt="rock" />
+          </div>
+          <div class="images" id="paper">
+            <img src="./images/paper.png" alt="paper" />
+          </div>
+          <div class="images" id="scissors">
+            <img src="./images/scissors.png" alt="scissors" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
