@@ -87,8 +87,19 @@ body{
     font-weight: bold;
     font-family: 'Teko',sans-serif;
 }
+footer{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding-bottom: 20px;
+    
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
 *{
-    /* border: 1px solid red; */
+  
     margin:0px;
     padding: 0px;
 }
